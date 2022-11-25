@@ -1,0 +1,3 @@
+CentOs 7.X
+#rpm -Uvh https://mirror.webtatic.com/yum/el7/epel-release.rpm
+#rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
