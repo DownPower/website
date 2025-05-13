@@ -1,0 +1,59 @@
+************* Preparing the environment for Debugger Extensions Gallery repositories **************
+   ExtensionRepository : Implicit
+   UseExperimentalFeatureForNugetShare : true
+   AllowNugetExeUpdate : true
+   NonInteractiveNuget : true
+   AllowNugetMSCredentialProviderInstall : true
+   AllowParallelInitializationOfLocalRepositories : true
+   EnableRedirectToChakraJsProvider : false
+
+   -- Configuring repositories
+      ----> Repository : LocalInstalled, Enabled: true
+      ----> Repository : UserExtensions, Enabled: true
+
+>>>>>>>>>>>>> Preparing the environment for Debugger Extensions Gallery repositories completed, duration 0.000 seconds
+
+************* Waiting for Debugger Extensions Gallery to Initialize **************
+
+>>>>>>>>>>>>> Waiting for Debugger Extensions Gallery to Initialize completed, duration 0.015 seconds
+   ----> Repository : UserExtensions, Enabled: true, Packages count: 0
+   ----> Repository : LocalInstalled, Enabled: true, Packages count: 44
+
+Microsoft (R) Windows Debugger Version 10.0.27829.1001 AMD64
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+
+Loading Dump File [C:\Users\admin\Downloads\Compressed\Procdump\Taskmgr.exe_250513_150815.dmp]
+User Mini Dump File with Full Memory: Only application data is available
+
+Comment: '
+*** "C:\Users\admin\Downloads\Compressed\Procdump\procdump.exe" -ma -e taskmgr.exe
+*** Unhandled exception: C0000005.ACCESS_VIOLATION'
+Symbol search path is: srv*
+Executable search path is: 
+Windows 10 Version 22000 MP (14 procs) Free x64
+Product: WinNt, suite: SingleUserTS
+Edition build lab: 22000.1.amd64fre.co_release.210604-1628
+Debug session time: Tue May 13 15:08:15.000 2025 (UTC + 8:00)
+System Uptime: 0 days 0:07:54.596
+Process Uptime: 0 days 0:00:18.000
+................................................................
+...............................................
+Loading unloaded module list
+....
+This dump file has an exception of interest stored in it.
+The stored exception information can be accessed via .ecxr
+(5eac.617c): Access violation - code c0000005 (first/second chance not available)
+
++------------------------------------------------------------------------+
+| This target supports Hardware-enforced Stack Protection. A HW based    |
+| "Shadow Stack" may be available to assist in debugging and analysis.   |
+| See aka.ms/userhsp for more info.                                      |
+|                                                                        |
+| dps @ssp                                                               |
+|                                                                        |
++------------------------------------------------------------------------+
+
+For analysis of this file, run !analyze -v
+Taskmgr!std::basic_string<unsigned short,std::char_traits<unsigned short>,std::allocator<unsigned short> >::basic_string<unsigned short,std::char_traits<unsigned short>,std::allocator<unsigned short> >+0x25:
+00007ff7`e53cb519 6642390442      cmp     word ptr [rdx+r8*2],ax ds:00000000`00000000=????
